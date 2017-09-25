@@ -55,3 +55,18 @@
 &sata {
 	status = "okay";
 };
+
+
+
+&usdhc3 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_usdhc3>;
+	bus-width = <4>;
+	cd-gpios = <&gpio7 0 GPIO_ACTIVE_LOW>;
+	wp-gpios = <&gpio7 1 GPIO_ACTIVE_HIGH>;
+	no-1-8-v;
+	keep-power-in-suspend;
+	enable-sdio-wakeup;
+	status = "okay";
+};
+
