@@ -40,12 +40,43 @@
 };
 
 &ldb {
+	split-mode;
 	lvds-channel@0 {
+		fsl,data-width = <24>;
 		crtc = "ipu2-di0";
+		display-timings {
+			native-mode = <&timing0>;
+			timing0: hsd100pxn1 {
+				clock-frequency = <148500000>;
+				hactive = <1920>;
+				vactive = <1080>;
+				hback-porch = <180>;
+				hfront-porch = <40>;
+				vback-porch = <28>;
+				vfront-porch = <7>;
+				hsync-len = <60>;
+				vsync-len = <10>;
+			};
+		};
 	};
 
 	lvds-channel@1 {
+		fsl,data-width = <24>;
 		crtc = "ipu2-di1";
+		display-timings {
+			native-mode = <&timing1>;
+			timing1: hsd100pxn1 {
+				clock-frequency = <148500000>;
+				hactive = <1920>;
+				vactive = <1080>;
+				hback-porch = <180>;
+				hfront-porch = <40>;
+				vback-porch = <28>;
+				vfront-porch = <7>;
+				hsync-len = <60>;
+				vsync-len = <10>;
+			};
+		};
 	};
 };
 
